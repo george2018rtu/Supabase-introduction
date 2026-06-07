@@ -1,10 +1,53 @@
-<link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMI Student Portal</title>
+  <link rel="stylesheet" href="./style.css?v=999">
+</head>
 
-<input id="task-title" placeholder="Task title">
-<input id="task-description" placeholder="Task description">
-<button onclick="addTask()">Add Task</button>
+<body>
+  <div id="auth-page">
+    <h1>Login</h1>
 
-<div id="task-list"></div>
+    <input id="auth-name" placeholder="Name">
+    <input id="auth-email" placeholder="Email">
+    <button onclick="signUp()">Sign Up</button>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="script.js"></script>
+    <hr>
+
+    <input id="login-email" placeholder="Email">
+    <button onclick="logIn()">Log In</button>
+  </div>
+
+<div id="app-page" style="display:none;">
+
+  <p id="current-user"></p>
+  <button onclick="logOut()">Log Out</button>
+
+<div id="main-layout">
+  <div class="workspace-card">
+    <h2>Available Projects</h2>
+
+    <input id="task-title" placeholder="Task title">
+    <textarea id="task-description" placeholder="Task description"></textarea>
+    <button onclick="addTask()">Add Task</button>
+
+    <div id="task-list"></div>
+    </div>
+
+    <div id="chat-box">
+      <h2 id="chat-title">Select a task chat</h2>
+      <div id="messages"></div>
+
+      <textarea id="message-input" placeholder="Type a message"></textarea>
+      <button onclick="sendMessage()">Send</button>
+      <button onclick="closeChat()">Close Chat</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="./script.js?v=2"></script>
+</body>
+</html>
