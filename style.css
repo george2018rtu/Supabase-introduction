@@ -9,7 +9,6 @@ body {
   color: #002b4f;
 }
 
-/* Top navbar */
 body::before {
   content: "IMI Student Portal";
   display: block;
@@ -71,7 +70,6 @@ button:hover {
   color: white;
 }
 
-/* Add task area */
 #task-title {
   width: 260px;
 }
